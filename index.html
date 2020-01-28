@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TheBestTripEver</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,16 +23,16 @@
                                 <a href="#">Про нас</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Фотогалерея</a>
+                                <a href="#gallery">Фотогалерея</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Новони</a>
+                                <a href="#news">Новони</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Відгуки</a>
+                                <a href="#feedback">Відгуки</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Контакти</a>
+                                <a href="#contacts">Контакти</a>
                             </li>
                         </ul>
                     </div>
@@ -91,9 +92,178 @@
                 </div>
             </div>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <div class="content">
-                
+                <h2 class="gallery_title">Фотогалерея</h2>
+                <div class="gallery_items">
+                    <div class="gallery_item"></div>
+                    <div class="gallery_item"></div>
+                    <div class="gallery_item"></div>
+                    <div class="gallery_item"></div>
+                    <div class="gallery_item"></div>
+                    <div class="gallery_item"></div>
+                </div>
+                <div class="gallery_btn">
+                    Більше фото
+                </div>
+            </div>
+        </div>
+        <div class="news" id="news">
+            <div class="content">
+                <h2 class="news_title">Основні новини</h2>
+                <div class="news_main--img"></div>
+                <p class="news_main--details">
+                    Балі – розкішний індонезійська курорт, де кожен зможе знайти для себе улюблене місце відпочинку. Ось вже багато років острів входить в число найбільш відвідуваних курортів світу, а засмаглі і задоволені туристи повертаються сюди знову і знову! На острові є безліч магазинів, де немає чіткої ціни за товар. Якщо Ви вмієте переконувати, то запропоновану ціну можна знизити навіть в кілька разів!
+                </p>
+                <div class="news_items">
+                    <div class="news_item">
+                        <div class="news_img"></div>
+                        <div class="news_item--content">
+                            <p class="news_item--title">Годування мавпочок</p>
+                            <p class="news_item--details">
+                                Дикі мавпи на острові – це незабутні емоції для туристів і нудні будні для місцевих.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news_img"></div>
+                        <div class="news_item--content">
+                            <p class="news_item--title">Здорове харчування</p>
+                            <p class="news_item--details">
+                                Балі славиться своїми низькими цінами і смачною їжею. Можна поїсти за 1.5$.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news_img"></div>
+                        <div class="news_item--content">
+                            <p class="news_item--title">Катання над скелями</p>
+                            <p class="news_item--details">
+                                Більшість населення працює в сфері туризму, який є головною галуззю економіки.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news_btn">Читати детальніше</div>
+            </div>
+        </div>
+        <div class="feedback" id="feedback">
+            <div class="content">
+                <h2 class="feedback_title">Наші відгуки</h2>
+                <div class="feedbacks">
+                    <div class="feedbacks_item">
+                        <div class="feedback_img"></div>
+                        <div class="feedbacks_item--head">
+                            <div class="feedback_photo"></div>
+                            <p class="feedback_name">Nina Dobrev</p>
+                            <div class="feedback_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="feedbacks_message">
+                            Хочу дуже подякувати туристичній агенції за подорож на Балі. Все сподобалось, дуже вдячні менеджеру за тур.
+                        </p>
+                        <p class="feedbacks_date">25.12.2018</p>
+                    </div>
+                    <div class="feedbacks_item">
+                        <div class="feedback_img"></div>
+                        <div class="feedbacks_item--head">
+                            <div class="feedback_photo"></div>
+                            <p class="feedback_name">Kendis Akola</p>
+                            <div class="feedback_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="feedbacks_message">
+                            Хочу подякувати агенції TheBestTripEver, а саме менеджеру Ірині, за організацію чудового відпочинку.
+                        </p>
+                        <p class="feedbacks_date">12.07.2017</p>
+                    </div>
+                    <div class="feedbacks_item">
+                        <div class="feedback_img"></div>
+                        <div class="feedbacks_item--head">
+                            <div class="feedback_photo"></div>
+                            <p class="feedback_name">Katerina Graham</p>
+                            <div class="feedback_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="feedbacks_message">
+                            Чудовий відпочинок! Чудові люди, смачна кухня, казкові місця в яких побували. Залишились пречудові враження.
+                        </p>
+                        <p class="feedbacks_date">05.09.2018</p>
+                    </div>
+                    <div class="feedbacks_item">
+                        <div class="feedback_img"></div>
+                        <div class="feedbacks_item--head">
+                            <div class="feedback_photo"></div>
+                            <p class="feedback_name">Pol Vesley</p>
+                            <div class="feedback_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="feedbacks_message">
+                            Чудове агентство, рекомендую! Приємні менеджери, з усім допомагають. Відпустка пройшла прекрасно.
+                        </p>
+                        <p class="feedbacks_date">13.10.2018</p>
+                    </div>
+                </div>
+                <div class="feedback_btn">Більше відгуків</div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#" class="back_home">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+            <ul class="footer_nav">
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#gallery">Фотогалерея</a></li>
+                <li><a href="#news">Новини</a></li>
+                <li><a href="#feedback">Відгуки</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+            <div class="footer_contacts" id="contacts">
+                <p class="contacts_info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Україна, м. Вінниця вул. Юності 98
+                </p>
+                <p class="contacts_info">
+                    <i class="fas fa-phone-volume"></i>
+                    <a href="tel:380971234567">+38 097 12345 67</a>
+                </p>
+                <p class="contacts_info info_last">
+                    <i class="far fa-envelope"></i>
+                    <a href="mailto:thebesttripever@gmail.com">thebesttripever@gmail.com</a>
+                </p>
+                <div class="footer_logo">
+                    <div class="logo_column"></div>
+                    <div class="logo_column">
+                        TheBestTripEver
+                    </div>
+                </div>
+            </div>
+            <div class="footer_social">
+                <div class="social_icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
             </div>
         </div>
     </div>
