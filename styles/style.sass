@@ -167,6 +167,7 @@ body
     background-repeat: no-repeat
     background-size: cover
     background-image: url(../img/discount_offer/food-1245685_1920.jpg)
+    display: none
     .body
         padding: 120px 0
         width: 100%
@@ -177,8 +178,8 @@ body
         display: grid
         grid-template-columns: 471px 1fr
     .column
-        border: 1px solid #000000
-        height: 512px
+        min-height: 512px
+        position: relative
     .column:last-child
         position: relative
     .discount_title
@@ -196,21 +197,24 @@ body
         text-align: center
         margin-bottom: 30px
 .discount_timer
-    border: 1px solid #000000
+    // border: 1px solid #000000
     margin: 0 auto
     height: 96px
     width: 280px
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 11px
-    .timer_item
-        border: 1px solid red
+    margin-bottom: 33px
+    .timer_subtitle
+        text-align: center
+        font-size: 18px
     .timer_number
         height: 64px
         position: relative
         display: flex
         justify-content: center
         align-items: center
+        margin-bottom: 5px
         .number_fraction
             position: absolute
             height: 31px
@@ -227,12 +231,148 @@ body
             font-size: 48px
             color: #000
             position: relative
-
-
-
+.discount_btn
+    width: 345px
+    height: 54px
+    border-radius: 5px
+    background-color: #D9534F
+    margin: 0 auto
+    display: flex
+    justify-content: center 
+    align-items: center
+    color: #fff
+    cursor: pointer
+    transition: .3s
+    &:hover
+        background-color: #ef7e7a
+.discount_img
+    position: absolute
+    width: 600px
+    height: 461px
+    bottom: 0
+    left: 25px
+    .img
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-position: ceanter
+        background-size: cover
+        background-repeat: no-repeat
+        background-image: url(../img/discount_offer/img.jpg)
+    .bg
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transform: translate(70px, -51px)
+        background-color: orange
 
 //********** OUR_MENU **********
+.our_menu
+    padding: 120px 0
+    display: none
+    .our_menu--title
+        font-size: 45px
+        text-align: center
+        margin-bottom: 60px
+    .menu_btn
+        width: 345px
+        height: 54px
+        background-color: #D9534F
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        margin: 0 auto
+        cursor: pointer
+        transition: .3s
+    .menu_btn:hover
+        background-color: #e6716d
+.menu_items
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    margin-bottom: 60px
+    .menu_item
+        min-height: 320px
+    .menu_img
+        background-color: orange
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    .img_one
+        background-image: url(../img/our_menu/img1.jpg)
+    .img_two
+        background-image: url(../img/our_menu/img2.jpg)
+    .img_three
+        background-image: url(../img/our_menu/img3.jpg)
+    .menu_title
+        font-size: 24px
+        margin-bottom: 25px
+    p
+        margin-bottom: 25px
+        font-size: 18px
+        line-height: 23px
+    p:last-child
+        margin-bottom: 0
+
+
 
 //********** QUESTION **********
+.question
+    // padding: 120px 0
+    position: relative
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    background-image: url(../img/question/question_bg.jpg)
+    .content
+        padding: 120px 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        .column
+            min-height: 500px
+        .question_img
+            width: 571px
+            height: 690px
+            bottom: 0
+            position: absolute
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url(../img/question/img.png)
+        .question_title
+            font-size: 45px
+            line-height: 58px
+            margin-bottom: 30px
+        input
+            margin-bottom: 30px
+            display: block
+            width: 100%
+            height: 70px
+            font-size: 18px
+            padding: 25px
+            color: rgba(0, 0, 0, 0.5)
+            outline: none
+            border: 1px solid rgba(0, 0, 0, 0.5)
+        textarea
+            resize: none
+            width: 100%
+            height: 145px
+            padding: 25px
+            font-size: 18px
+            color: rgba(0, 0, 0, 0.5)
+            outline: none
+            border: 1px solid rgba(0, 0, 0, 0.5)
+            color: rgba(0, 0, 0, 0.5)
+            margin-bottom: 30px
+
+        
+            
+            
 
 //********** FOOTER **********
