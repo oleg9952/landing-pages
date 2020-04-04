@@ -1,0 +1,19 @@
+@use './variables.scss' as *;
+
+@mixin bg_image($img) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url($img);
+}
+
+@mixin title($align) {
+    font-family: $unna;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 63px;
+    text-align: $align;
+    text-transform: uppercase;
+    color: #000;
+}

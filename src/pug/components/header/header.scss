@@ -1,0 +1,85 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+
+.header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    @include mixins.bg_image('../assests/header/header_bg.jpg');
+    &__content {
+        width: 1170px;
+        // border: 2px solid black;
+        margin: 0 auto;
+    }
+    &__content-title {
+        @include mixins.title('left');
+    }
+    &__content-text {
+        max-width: 434px;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        color: #2B2B2B;
+        margin-bottom: 55px;
+    }
+    &__content-btn {
+        width: 270px;
+        height: 80px;
+        background-color: #3DD6DF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .header {
+        &__content {
+            width: 100%;
+            padding-left: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__content {
+            width: 100%;
+            padding: 15px;
+        }
+        &__content-title {
+            @include mixins.title('center');
+            text-align: center;
+        }
+        .underline {
+            margin: 0 auto;
+        }
+        &__content-text {
+            text-align: center;
+            margin: 0 auto 55px;
+        }
+        &__content-btn {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        background-position: 60% 50%;
+        &__content-title {
+            font-size: 26px;
+        }
+    }
+}
