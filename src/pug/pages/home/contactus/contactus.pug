@@ -1,0 +1,31 @@
+include ../../../components/underline/underline
+
+mixin contactus
+    .contactus
+        h1.contactus__title Contact us
+        +underline
+        p.contactus__subtitle Should you have any questions, feel free to contact us:
+        .contactus__columns
+            form.contactus__columns-column.contactus--form
+                input.contactus__form-input(
+                    type="text"
+                    name="name"
+                    placeholder="Name:"
+                )
+                input.contactus__form-input(
+                    type="email"
+                    name="email"
+                    placeholder="E-mail:"
+                    reqired
+                )
+                textarea.contactus__form-textarea(
+                    name="message"
+                    placeholder="Message:"
+                )
+                .contactus__form-agree
+                    input#agree(type="checkbox", name="agree")
+                    label(for="agree") I agree to the processing of my personal data
+                button.contactus__form-submit Submit
+            .contactus__columns-column
+                .contactus-map
+                    

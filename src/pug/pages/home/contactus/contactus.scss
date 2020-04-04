@@ -1,0 +1,100 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.contactus {
+    min-height: 100vh;
+    padding: 120px 0;
+    background-color: #E3F9FF;
+    &__title {
+        @include mixins.title(center);
+        margin-bottom: 10px;
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+    &__subtitle {
+        font-family: $open_sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: #000;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__columns {
+        // border: 1px solid black;
+        width: 1170px;
+        min-height: 50px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    // .contactus__columns-column {
+    //     border: 1px solid black;
+    // }
+    &--form {
+        .contactus__form-input,
+        .contactus__form-textarea {
+            display: block;
+            height: 65px;
+            width: 100%;
+            background-color: #fff;
+            border: 2px solid rgba(168, 168, 168, 0.7);
+            padding: 0 19px;
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            outline: none;
+        }
+        .contactus__form-input:focus,
+        .contactus__form-textarea:focus {
+            border: 2px solid #3DD6DF;
+        }
+        .contactus__form-textarea {
+            padding-top: 19px;
+            height: 256px;
+            resize: none;
+        }
+        .contactus__form-agree {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 30px;
+            cursor: url('../assests/ourdentists/pointer.svg'), auto;
+            > input, label {
+                cursor: url('../assests/ourdentists/pointer.svg'), auto;
+            }
+        }
+        .contactus__form-submit {
+            width: 270px;
+            height: 73px;
+            background-color: #3DD6DF;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            cursor: url('../assests/ourdentists/pointer.svg'), auto;
+            color: #fff;
+            box-shadow: 4px 4px 30px rgba(61, 214, 223, 0.3);
+        }
+    }
+    &-map {
+        @include mixins.bg_image('../assests/contactus/map.jpg');
+        height: 445px;
+    }
+}
