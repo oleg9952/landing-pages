@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;    
+    display: none;
     @include mixins.bg_image('../assests/header/header_bg.jpg');
     &__content {
         width: 1170px;
