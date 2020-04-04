@@ -14,7 +14,7 @@
         margin: 0 auto;
     }
     &__content-title {
-        @include mixins.title('left');
+        @include mixins.title(left);
     }
     &__content-text {
         max-width: 434px;
@@ -60,8 +60,7 @@
             padding: 15px;
         }
         &__content-title {
-            @include mixins.title('center');
-            text-align: center;
+            @include mixins.title(center);
         }
         .underline {
             margin: 0 auto;

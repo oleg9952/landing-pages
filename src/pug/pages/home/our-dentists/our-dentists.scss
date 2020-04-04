@@ -1,5 +1,128 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as mixins;
+
 .ourdentists {
-    height: 1000px;
-    background-color: orange;
-    padding-top: 120px;
+    min-height: 100vh;
+    background-color: #E3F9FF;
+    padding: 120px 0px;
+    &__title {
+        @include mixins.title(center);
+        margin-bottom: 10px;
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+    &__cards {
+        width: 1170px;
+        // border: 2px solid #fff;
+        margin: 0 auto 60px;
+        height: 468px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        .ourdentists__cards-card {
+            background-color: #fff;
+            transition: .3s;
+            display: grid;
+            grid-template-rows: 1fr 73px;
+        }
+        .ourdentists__cards-card:hover {
+            box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+        }
+        .ourdentists__cards-card:nth-child(1) {
+            .ourdentists__card-picture {
+                @include mixins.bg_image('../assests/ourdentists/dentist1.jpg');
+            }
+        }
+        .ourdentists__cards-card:nth-child(2) {
+            .ourdentists__card-picture {
+                @include mixins.bg_image('../assests/ourdentists/dentist2.jpg');
+            }
+        }
+        .ourdentists__cards-card:nth-child(3) {
+            .ourdentists__card-picture {
+                @include mixins.bg_image('../assests/ourdentists/dentist3.jpg');
+            }
+        }
+        .ourdentists__cards-card:nth-child(4) {
+            .ourdentists__card-picture {
+                @include mixins.bg_image('../assests/ourdentists/dentist4.jpg');
+            }
+        }
+        .ourdentists__card-name {
+            transition: .3s;
+            cursor: url('../assests/ourdentists/pointer.svg'), auto;
+            position: relative;
+        }
+        .ourdentists__name-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            transition: .3s;
+            position: relative;
+            background-color: #fff;
+            z-index: 1;
+        }
+        .ourdentists__card-name:hover {
+            background-color: #3DD6DF;
+        }
+        .ourdentists__card-name:hover > .ourdentists__name-content {
+            opacity: 0;
+        }
+        .ourdentists__name-hovertext {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .ourdentists__name-uptitle {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            text-transform: capitalize;
+        }
+        .ourdentists__name-title {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+    &__btn {
+        width: 270px;
+        height: 73px;
+        left: 825px;
+        top: 2745px;
+        border: 2px solid #3DD6DF;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #3DD6DF;
+        cursor: url('../assests/ourdentists/pointer.svg'), auto;
+        outline: none;
+        margin: 0 auto;
+        display: block;
+    }
 }
