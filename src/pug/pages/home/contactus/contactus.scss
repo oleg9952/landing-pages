@@ -3,8 +3,9 @@
 
 .contactus {
     min-height: 100vh;
-    padding: 120px 0;
+    padding: 120px 15px;
     background-color: #E3F9FF;
+    display: none;
     &__title {
         @include mixins.title(center);
         margin-bottom: 10px;
@@ -24,17 +25,13 @@
         margin-bottom: 60px;
     }
     &__columns {
-        // border: 1px solid black;
-        width: 1170px;
+        max-width: 1170px;
         min-height: 50px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 30px;
     }
-    // .contactus__columns-column {
-    //     border: 1px solid black;
-    // }
     &--form {
         .contactus__form-input,
         .contactus__form-textarea {
@@ -96,5 +93,37 @@
     &-map {
         @include mixins.bg_image('../assests/contactus/map.jpg');
         height: 445px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactus {
+        &__columns {
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 40px;
+        }
+        &--form {
+            .contactus__form-agree {
+                text-align: center;
+                font-size: 13px;
+            }
+            .contactus__form-submit {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) { 
+    .contactus {
+        &__title {
+            font-size: 24px;
+        }
+        .underline {
+            margin: 0 auto 40px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
     }
 }

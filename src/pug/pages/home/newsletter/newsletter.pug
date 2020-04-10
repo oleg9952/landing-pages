@@ -1,0 +1,14 @@
+include ../../../components/underline/underline
+
+mixin newsletter
+    .newsletter
+        h1.newsletter__title Newsletter subscription
+        +underline  
+        p.newsletter__subtitle Subscribe to our Healthy News to always be healthy
+        form.newsletter__form
+            input.newsletter__form-input(type="email", name="email" placeholder="Enter your e-mail")
+            button.newsletter__form-submit(type="submit") Submit
+        .newsletter__social
+            i.fab.fa-instagram
+            i.fab.fa-facebook
+            i.fab.fa-youtube
