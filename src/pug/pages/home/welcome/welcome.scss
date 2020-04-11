@@ -1,0 +1,147 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.welcome {
+    padding: 115px 15px;
+    &__title {
+        @include mixins.title(center);
+        margin-bottom: 10px;
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+    &__content {
+        max-width: 1170px;
+        min-height: 625px;
+        margin: 0 auto;
+        background-color: #E3F9FF;
+        position: relative;
+        .welcome__content-column:first-child {
+            height: 625px;
+            width: 734px;
+            padding: 60px 50px 60px 60px;
+        }
+        .welcome__content-subtitle {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: left;
+            color: #000;
+            // margin-bottom: 10px;
+        }
+        .welcome__content-title {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #000000;
+            margin-bottom: 40px;
+        }
+        .welcome__listholder-listitem {
+            min-height: 50px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+        }
+        .welcome__listitem-column:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .welcome__listholder-listitem:nth-child(1) {
+            width: 90%;
+        }
+        .welcome__listholder-listitem:nth-child(2) {
+            width: 85%;
+        }
+        .welcome__listholder-listitem:nth-child(3) {
+            width: 70%;
+        }
+        .welcome__listitem-number  {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 96px;
+            line-height: 131px;
+            text-align: center;
+            color: rgba(61, 214, 223, 0.5);
+        }
+        .welcome__listitem-title {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        p.welcome__listitem-text {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #515151;
+        }
+
+        .welcome__content-column:last-child {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: green;
+            height: 100%;
+            width: 550px;
+            @include mixins.bg_image('../../src/assests/welcome/welcome_bg.jpg');
+            background-position: 100% 50%;
+            clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .welcome {
+        &__content {
+            max-width: 768px;
+            display: grid;
+            grid-template-rows: 500px minmax(625px, 1fr);
+            .welcome__content-column:first-child {
+                height: auto;
+                width: auto;
+                padding: 60px 50px 60px 60px;
+                order: 2;
+            }
+            .welcome__content-column:last-child {
+                position: relative;
+                height: auto;
+                width: auto;
+                order: 1;
+                clip-path: none;
+                background-position: 100% 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .welcome {
+        &__title {
+            text-align: center;
+            font-size: 24px;
+        }
+        .welcome__content-title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .welcome__content-subtitle {
+            text-align: center;
+        }
+        .welcome__content-column:first-child {
+            padding: 10px 10px 20px 10px;
+        }
+    }
+}

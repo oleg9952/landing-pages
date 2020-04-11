@@ -2,11 +2,13 @@ extends ../../base
 include ./our-dentists/our-dentists
 include ./contactus/contactus
 include ./newsletter/newsletter
+include ./welcome/welcome
 
 block variables
     - var title = 'Home'
 
 block content
+    +welcome
     +our-dentists
     +contactus
     +newsletter
