@@ -3,6 +3,7 @@ include ./our-dentists/our-dentists
 include ./contactus/contactus
 include ./newsletter/newsletter
 include ./welcome/welcome
+include ./treatment/treatment
 
 block variables
     - var title = 'Home'
@@ -10,5 +11,6 @@ block variables
 block content
     +welcome
     +our-dentists
+    +treatment
     +contactus
     +newsletter

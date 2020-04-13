@@ -1,0 +1,157 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.treatment {
+    padding: 120px 15px;
+    &__title {
+        @include mixins.title(center);
+        margin-bottom: 10px;
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+    &__content {
+        width: 1170px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 470px 1fr;
+        grid-gap: 30px;
+        .treatment__content-column {
+            height: 565px;
+        }
+        // ----- ACCORDION
+        .treatment--accordion {
+            background-color: #fff;
+            box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.07);
+            padding: 50px 40px 50px 70px;
+        }
+        .treatment__section-head {
+            padding: 10px 0 10px 20px;
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+            border-bottom: 2px solid #E8E8E8;;
+            position: relative;
+            cursor: url('../assests/ourdentists/pointer.svg'), auto;
+        }
+        .head-arrow {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%) rotate(-180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: normal;
+            color: #D7D7D7;
+            transition: .5s;
+        }
+        .treatment__section-head.active {
+            font-weight: bold;
+        }
+        .treatment__section-head.active + .treatment__section-body {
+            height: 150px;
+        }
+        .treatment__section-head.active > .head-arrow {
+            transform: translateY(-50%) rotate(0deg);
+            color: #3DD6DF;
+        }
+        .treatment__section-body {
+            overflow: hidden;
+            height: 0px;
+            transition: .5s;
+        }
+        .treatment__sectio-text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #515151;
+            padding: 10px 0 10px 20px;
+        }
+
+        // ----- GALLERY
+        .treatment--gallry {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            grid-template-areas: 
+                'a a a a a a a b b b b b'
+                'c c c c c d d d d d d d';
+            grid-gap: 30px;
+        }
+        .treatment__gallery-picture {
+            background-color: #fff;
+        }
+        .treatment__gallery-picture:nth-child(1) {
+            grid-area: a;
+            grid-row: 1/7;
+            @include mixins.bg_image('../../src/assests/treatment/image1.jpg');
+        }
+        .treatment__gallery-picture:nth-child(2) {
+            grid-area: b;
+            grid-row: 1/7;
+            @include mixins.bg_image('../../src/assests/treatment/image2.jpg');
+        }
+        .treatment__gallery-picture:nth-child(3) {
+            grid-area: c;
+            grid-row: 7/13;
+            @include mixins.bg_image('../../src/assests/treatment/image3.jpg');
+        }
+        .treatment__gallery-picture:nth-child(4) {
+            grid-area: d;
+            grid-row: 7/13;
+            @include mixins.bg_image('../../src/assests/treatment/image4.jpg');
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1170px) {
+    .treatment {
+        &__content {
+            margin: 0 auto;
+            width: 470px;
+            grid-template-columns: 470px;
+        }
+        .treatment__content-column:first-child {
+            order: 2;
+        }
+        .treatment__content-column:last-child {
+            height: 400px;
+            order: 1;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .treatment {
+        &__content {
+            grid-template-columns: 320px;
+            grid-column: unset;
+            grid-row-gap: 30px;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: center;
+            .treatment--accordion {
+                padding: 40px 10px;
+            }
+            .treatment__section-head.active + .treatment__section-body {
+                height: 170px;
+            }
+            .treatment--gallry {
+                grid-template-columns: repeat(12, auto);
+            }
+            .treatment__content-column:last-child {
+                height: 350px;
+                order: 1;
+            }
+        }
+    }
+}

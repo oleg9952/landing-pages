@@ -1,5 +1,4 @@
 import $ from 'jquery';
-// import 'slick-carousel'
 
 export default () => {
    $('.ourdentists__cards').slick({
