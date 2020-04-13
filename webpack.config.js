@@ -16,6 +16,9 @@ module.exports = {
     devServer: {
         port: 4200
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     plugins: [
         new HTMLPlugin({
             template: './pug/pages/home/index.pug',

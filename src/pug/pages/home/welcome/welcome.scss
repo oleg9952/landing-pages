@@ -3,6 +3,7 @@
 
 .welcome {
     padding: 115px 15px;
+    display: none;
     &__title {
         @include mixins.title(center);
         margin-bottom: 10px;
