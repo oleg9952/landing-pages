@@ -1,0 +1,108 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+
+.mobilenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0, 242, 255, 1), 
+        rgba(111, 243, 255, 1), 
+        rgba(158, 245, 255, 1), 
+        rgba(195, 247, 255, 1), 
+        rgba(227, 249, 255, 1)
+    );   
+    transition: .5s; 
+    &__close-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        cursor: pointer;
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 4px;
+            width: 100%;
+            background-color: #fff;
+            transform: translate(-50%, -50%);
+        }
+        div:first-child {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        div:last-child {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    &__list {
+        font-size: 24px;
+        a {
+            display: block;
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(5, 91, 252, .3);
+            margin: 15px 0;
+            width: 200px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: $unna;
+            color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: .3s;
+        }
+        a:hover {
+            background-color: rgba(5, 91, 252, .7);
+        }
+        .mobilenav__list-li {
+            transform: translateX(-100%) scale(.5);
+            opacity: 0;
+            transition: .5s;
+        }
+        .mobilenav__list-li:nth-child(1) {
+            transition-delay: 0s;
+        }
+        .mobilenav__list-li:nth-child(2) {
+            transition-delay: .1s;
+        }
+        .mobilenav__list-li:nth-child(3) {
+            transition-delay: .2s;
+        }
+        .mobilenav__list-li:nth-child(4) {
+            transition-delay: .3s;
+        }
+        .mobilenav__list-li:nth-child(5) {
+            transition-delay: .4s;
+        }
+        .mobilenav__list-li.active {
+            transform: translateX(0%) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.mobilenav.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobilenav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mobilenav {
+        display: flex;
+    }
+}
