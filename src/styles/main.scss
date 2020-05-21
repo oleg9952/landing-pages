@@ -3,6 +3,7 @@
 @use './global.scss';
 
 // ***** Components *****
+@use '../pug/components/desktopnav/desktopnav.scss';
 @use '../pug/components/header/header.scss';
 @use '../pug/components/underline/underline.scss';
 

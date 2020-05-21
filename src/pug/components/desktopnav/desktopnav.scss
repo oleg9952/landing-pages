@@ -1,0 +1,167 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+
+.desktopnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    &__content {
+        max-width: 1170px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content-column {
+        height: 100%;
+    }
+    .desktopnav__content-mobilebtn {
+        display: none;
+    }
+    &--logo {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        align-items: center;
+        .desktopnav__logo-icon {
+            @include mixins.bg_image('../assests/desktopnav/logo.svg');
+            width: 72px;
+            height: 72px;
+        }
+        .desktopnav__logo-text {
+            padding-left: 10px;
+        }
+        .desktopnav__logo-title {
+            font-family: $unna;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 2px;
+        }
+        .desktopnav__logo-subtitle {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &--navs {
+        display: flex;
+        justify-content: flex-end;
+        .desktopnav__navs-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            a {
+                display: block;
+                font-family: $open_sans;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 22px;            
+                font-style: normal;
+                color: #000;
+                cursor: pointer;
+                // width: 110px;
+                padding: 15px;
+                text-align: center;
+            }
+            a:hover {
+                text-decoration-line: underline;
+                color: #3DD6DF;
+            }
+            a.active {
+                text-decoration-line: underline;
+                color: #3DD6DF;
+                font-weight: bold;
+            }
+        }
+
+        .desktopnav__navs-info {
+            display: grid;
+            grid-template-columns: 1fr 50px;
+            width: 200px;
+            margin-left: 20px;
+            .desktopnav__info-icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                @include mixins.bg_image('../assests/desktopnav/phone-icon.svg');
+            }
+            a {
+                font-family: $open_sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                text-decoration: none;
+                color: #000;
+            }
+            .desktopnav__info-search {
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+                cursor: pointer;
+                @include mixins.bg_image('../assests/desktopnav/search-icon.svg');
+            }
+        }
+        .desktopnav__info-column {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .desktopnav {
+        padding: 0 10px;
+        &--navs {
+            display: none;
+        }
+        &__content-mobilebtn {
+            display: block !important;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            position: relative;
+            div {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 2px;
+                background-color: #000;
+            }
+            div:nth-child(1) {
+                top: 15%;
+            }
+            div:nth-child(2) {
+                top: 50%;
+            }
+            div:nth-child(3) {
+                top: 85%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .desktopnav {
+        &--logo {
+            .desktopnav__logo-title {
+                font-size: 20px;
+            }
+            .desktopnav__logo-subtitle {
+                font-size: 14px;
+                max-width: 70%;
+            }
+        }
+    }
+}

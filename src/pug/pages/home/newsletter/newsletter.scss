@@ -4,7 +4,7 @@
 .newsletter {
     min-height: 654px;
     padding: 120px 15px;
-    display: none;
+    // display: none;
     @include mixins.bg_image('../assests/newsletter/newsletter_bg.jpg');
     &__title {
         @include mixins.title(center);
