@@ -1,0 +1,15 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+@use './grid-content/grid-content.scss';
+
+.about {
+    padding-top: 130px;
+    max-width: 1170px;
+    margin: 0 auto;
+    &__title {
+        @include mixins.title(center);
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+}

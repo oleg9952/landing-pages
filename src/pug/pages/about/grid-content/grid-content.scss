@@ -1,0 +1,54 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.gridcontent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+    margin-bottom: 120px;
+    &__img {
+        height: 380px;
+    }
+    &--imgone {
+        @include mixins.bg_image('../assests/gridcontent/img1.jpg');
+    }
+    &--imgtwo {
+        @include mixins.bg_image('../assests/gridcontent/img2.jpg');
+    }
+    &--imgthree {
+        @include mixins.bg_image('../assests/gridcontent/img3.jpg');
+    }
+    &__text {
+        font-family: $open_sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .gridcontent {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        div:nth-child(1) {
+            order: 1;
+        }
+        div:nth-child(2) {
+            order: 2;
+        }
+        div:nth-child(3) {
+            order: 4;
+        }
+        div:nth-child(4) {
+            order: 3;
+        }
+        div:nth-child(5) {
+            order: 5;
+        }
+        div:nth-child(6) {
+            order: 6;
+        }
+    }
+}

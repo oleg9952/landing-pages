@@ -7,8 +7,10 @@
 @use '../pug/components/mobilenav/mobilenav.scss';
 @use '../pug/components/header/header.scss';
 @use '../pug/components/underline/underline.scss';
+@use '../pug/components/breadcrumbs/breadcrumbs.scss';
 
 @use '../pug/components/footer/footer.scss';
 
 // ***** Pages *****
 @use '../pug/pages/home/home.scss';
+@use '../pug/pages/about/about.scss';

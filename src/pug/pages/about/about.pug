@@ -1,0 +1,16 @@
+extends ../../base
+include ../../components/breadcrumbs/breadcrumbs
+include ../../components/underline/underline
+include ./grid-content/grid-content
+include ../home/contactus/contactus
+
+block variables
+    - var title = 'About'
+
+block content
+    .about
+        +breadcrumbs
+        h2.about__title Welcome to dental hope
+        +underline
+        +grid-content
+    +contactus

@@ -1,0 +1,21 @@
+@use '../../../styles/variables.scss' as *;
+
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+    a {
+        font-family: $unna;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #A0A0A0;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+    a.active {
+        color: #000;
+    }
+}

@@ -3,6 +3,17 @@ const HTMLPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CSSExtractPlugin = require('mini-css-extract-plugin')
 
+const PAGES = [
+    {
+        template: './pug/pages/home/index.pug',
+        filename: './index.html'
+    },
+    {
+        template: './pug/pages/about/about.pug',
+        filename: './about.html'
+    }
+]
+
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
@@ -20,10 +31,7 @@ module.exports = {
         jquery: 'jQuery'
     },
     plugins: [
-        new HTMLPlugin({
-            template: './pug/pages/home/index.pug',
-            filename: './index.html'
-        }),
+        ...PAGES.map((page) => new HTMLPlugin(page)),
         new CleanWebpackPlugin(),
         new CSSExtractPlugin({
             filename: 'style.css'
