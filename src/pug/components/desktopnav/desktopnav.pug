@@ -1,3 +1,5 @@
+block variables
+
 mixin desktopnav
     .desktopnav
         .desktopnav__content
@@ -9,11 +11,20 @@ mixin desktopnav
             .desktopnav__content-column.desktopnav--navs
                 ul.desktopnav__navs-list
                     li.desktopnav__list-li
-                        a(href="#").active Home
+                        if title!= 'Home'
+                            a(href="./index.html") Home
+                        else 
+                            a(href="./index.html").active Home
                     li.desktopnav__list-li
-                        a(href="#") About
+                        if title!= 'About'
+                            a(href="./about.html") About
+                        else
+                            a(href="./about.html").active About
                     li.desktopnav__list-li
-                        a(href="#") Our dentists
+                        if title!= 'Our-dentists'
+                            a(href="./our-dentists.html") Our dentists
+                        else 
+                            a(href="./our-dentists.html").active Our dentists
                     li.desktopnav__list-li
                         a(href="#") Treatment
                     li.desktopnav__list-li

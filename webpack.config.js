@@ -11,6 +11,10 @@ const PAGES = [
     {
         template: './pug/pages/about/about.pug',
         filename: './about.html'
+    },
+    {
+        template: './pug/pages/our-dentists/our-dentists.pug',
+        filename: './our-dentists.html'
     }
 ]
 
