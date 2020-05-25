@@ -1,3 +1,169 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+
 .footer {
-    display: none;
+    min-height: 205px;
+    background-color: #000;
+    padding-top: 30px;
+    &__content {
+        max-width: 1170px;
+        height: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 350px 1fr 1fr 1fr;
+    }
+    &__logo {
+        height: 72px;
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        .footer__logo-icon {
+            width: 72px;
+            height: 72px;
+            @include mixins.bg_image('../assests/desktopnav/logo.svg')
+        }
+        .footer__logo-text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 10px;
+            color: #fff;
+        }
+        .footer__logo-title {
+            font-family: $unna;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 2px;
+        }
+        .footer__logo-subtitle {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &__nav {
+        list-style: none;
+        width: 110px;
+        margin: 0 auto;
+        a {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            line-height: 30px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    &__schedule {
+        width: 220px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        .footer__schedule-icon {
+            height: 20px;
+            @include mixins.bg_image('../assests/footer/footer-icon.svg');
+        }
+        .footer__schedule-body {
+            padding-left: 10px;
+
+        }
+        .footer__schedule-list {
+            list-style: none;
+        }
+        .footer__schedule-li {
+            font-family: $open_sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #fff;
+            padding-bottom: 12px;
+        }
+    }
+    &__contacts {
+        width: 210px;
+        margin: 0 auto;
+        .footer__contacts-contact, a, p {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer__contacts-contact {
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            margin-bottom: 10px;
+            .contact--icon {
+                background-size: contain;
+            }
+        }
+        .contact--text {
+            padding-left: 8px;
+        }
+        .footer__contacts-contact:nth-child(1) {
+            .contact--icon {
+                @include mixins.bg_image('../assests/footer/phone-icon.svg');
+            }
+        }
+        .footer__contacts-contact:nth-child(2) {
+            .contact--icon {
+                @include mixins.bg_image('../assests/footer/letter-icon.svg');
+            }
+        }
+        .footer__contacts-contact:nth-child(3) {
+            .contact--icon {
+                @include mixins.bg_image('../assests/footer/marker-icon.svg');
+            }
+        }
+    }
+    &__social {
+        width: 210px;
+        margin: 0 auto;
+        .footer__social-icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .footer__social-icon:nth-child(1) {
+            @include mixins.bg_image('../assests/footer/insta-icon.svg');
+        }
+        .footer__social-icon:nth-child(2) {
+            @include mixins.bg_image('../assests/footer/fb-icon.svg');
+        }
+        .footer__social-icon:nth-child(3) {
+            @include mixins.bg_image('../assests/footer/youtube-icon.svg');
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .footer {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+        &__logo {
+            margin: 0 auto 40px;
+            width: 310px;
+        }
+        &__nav {
+            margin: 0 auto 40px;
+        }
+        &__schedule {
+            margin: 0 auto 40px;
+        }
+    }
 }
