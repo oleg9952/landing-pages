@@ -23,8 +23,6 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 700px;
-  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +36,8 @@ body {
 
 .portfolio_item {
   height: 100%;
-  width: 45%;
+  width: 315px;
+  height: 400px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -46,6 +45,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  margin: 0 30px;
 }
 
 .portfolio_item a {
@@ -69,14 +69,19 @@ body {
   transition: 2s;
 }
 
-.portfolio_item:first-child .portfolio_bg {
+.portfolio_item:nth-child(1) .portfolio_bg {
   background-image: url(./img/trip.jpg);
   height: 240%;
 }
 
-.portfolio_item:last-child .portfolio_bg {
+.portfolio_item:nth-child(2) .portfolio_bg {
   background-image: url(./img/food.jpg);
   height: 210%;
+}
+
+.portfolio_item:nth-child(3) .portfolio_bg {
+  background-image: url(./img/dental_hope.jpg);
+  height: 240%;
 }
 
 .portfolio_item:hover {
@@ -86,14 +91,19 @@ body {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.portfolio_item:first-child:hover > .portfolio_bg {
+.portfolio_item:nth-child(1):hover > .portfolio_bg {
   -webkit-transform: translateY(-555px);
           transform: translateY(-555px);
 }
 
-.portfolio_item:last-child:hover > .portfolio_bg {
+.portfolio_item:nth-child(2):hover > .portfolio_bg {
   -webkit-transform: translateY(-440px);
           transform: translateY(-440px);
+}
+
+.portfolio_item:nth-child(3):hover > .portfolio_bg {
+  -webkit-transform: translateY(-560px);
+          transform: translateY(-560px);
 }
 
 @-webkit-keyframes animateGradient {
