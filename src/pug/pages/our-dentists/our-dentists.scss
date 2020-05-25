@@ -1,3 +1,155 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as mixins;
+
 .dentists {
-    
+    padding-top: 130px;
+    max-width: 1170px;
+    margin: 0 auto;
+    &__title {
+        @include mixins.title(center);
+    }
+    .underline {
+        margin: 0 auto 60px;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 60px;
+        justify-items: center;
+        margin: 0 auto 120px;
+    }
+    &__grid-card {
+        width: 270px;
+        display: grid;
+        grid-template-rows: 561px 73px;
+        transition: .3s;
+        .dentists__card-wrapper {
+            display: grid;
+            grid-template-rows: 395px 166px;
+        }
+        .dentists__card-wrapper:hover + .card--btn,
+        .card--btn:hover {
+            opacity: 1;
+        }
+        .card--text {
+            padding-top: 20px;
+        }
+        .dentists__card-uptitle {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+        .dentists__card-name {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        .dentists__card-details {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #A5A5A5;
+            padding: 0 10px;
+        }
+        .card--btn {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #fff;
+            background-color: #3DD6DF;
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+    &__grid-card:hover {
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+    }
+    &__grid-card:nth-child(1) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist1.jpg')
+        }
+    }
+    &__grid-card:nth-child(2) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist2.jpg')
+        }
+    }
+    &__grid-card:nth-child(3) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist3.jpg')
+        }
+    }
+    &__grid-card:nth-child(4) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist4.jpg')
+        }
+    }
+    &__grid-card:nth-child(5) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist5.jpg')
+        }
+    }
+    &__grid-card:nth-child(6) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist6.jpg')
+        }
+    }
+    &__grid-card:nth-child(7) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist7.jpg')
+        }
+    }
+    &__grid-card:nth-child(8) {
+        .card--img {
+            @include mixins.bg_image('../assests/ourdentists/dentist8.jpg')
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .dentists {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            width: 870px;
+        }
+    }
+}
+@media screen and (max-width: 870px) {
+    .dentists {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            width: 570px;
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .dentists {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            width: 270px;
+        }
+    }
 }

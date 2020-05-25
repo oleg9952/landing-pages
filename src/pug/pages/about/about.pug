@@ -9,7 +9,10 @@ block variables
 
 block content
     .about
-        +breadcrumbs
+        +breadcrumbs({
+            name: 'About',
+            link: './about.html'
+        })
         h2.about__title Welcome to dental hope
         +underline
         +grid-content

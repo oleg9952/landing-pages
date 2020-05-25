@@ -5,4 +5,6 @@ import { mobileNav } from '../pug/components/mobilenav/mobilenav';
 
 mobileNav();
 ourDentists();
-treatment();
+if (document.title === 'Home') {
+    treatment();
+}

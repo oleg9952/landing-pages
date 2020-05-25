@@ -1,7 +1,80 @@
 extends ../../base
+include ../../components/breadcrumbs/breadcrumbs
+include ../../components/underline/underline
 
 block variables
     - var title = 'Our-dentists'
 
 block content
     .dentists
+        +breadcrumbs({
+            name: 'Our dentists',
+            link: './our-dentists.html'
+        })
+        h2.dentists__title Our dentists
+        +underline
+        .dentists__grid
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Matthew Davis
+                        p.dentists__card-details Orthopedic dentist of the highest category candidate of medical sciences.
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Nikolina Dobreva
+                        p.dentists__card-details Dentist, general practitioner, category I
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Kat Graham
+                        p.dentists__card-details Orthopedic dentist of the highest category
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Zachary George
+                        p.dentists__card-details Orthopedic dentist of the highest category, Head of the clinic 
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Matthew Davis
+                        p.dentists__card-details Dentist, specialist in functional diagnostics
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Nikolina Dobreva
+                        p.dentists__card-details Doctor surgeon of the highest category. Candidate of Medical Sciences
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Kat Graham
+                        p.dentists__card-details Orthopedic dentist of the highest category, Head of the clinic #2 
+                .dentists__card-column.card--btn make an appointment
+            .dentists__grid-card
+                .dentists__card-wrapper
+                    .dentists__card-column.card--img
+                    .dentists__card-column.card--text
+                        p.dentists__card-uptitle Dr’s Title
+                        p.dentists__card-name Zachary George
+                        p.dentists__card-details Orthopedic dentist of the highest category candidate of medical sciences.
+                .dentists__card-column.card--btn make an appointment
